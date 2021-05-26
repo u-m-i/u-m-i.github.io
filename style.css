@@ -1,0 +1,24 @@
+.body-div{
+    max-width: 100%;
+    max-height: 100%;
+    background-image:url('https://github.com/u-m-i/u-m-i.github.io/blob/master/interior%20casa%20indonesia%20completa.png?raw=true');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;       
+}
+
+.div-image-cointainer {
+    padding-top:0.7em;
+    padding-bottom: 0.7em;
+    padding-left:8em;
+        /* background-image: url('https://github.com/u-m-i/u-m-i.github.io/blob/master/marco.png?raw=true');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;  */
+}
+
+img{
+    height: 65%;
+    width: 89%;
+
+}
