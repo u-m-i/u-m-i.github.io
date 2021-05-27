@@ -30,7 +30,7 @@ body{
     width: 100%;
     height: auto;
 
-    background-image:url('https://u-m-i.github.io/asset_1.png');
+    background-image:url('https://github.com/u-m-i/u-m-i.github.io/blob/master/assests/asset_1.png?raw=true');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +89,7 @@ body{
     width:26.79em;
     height:4.988em;
     bottom:0;
-    left:calc(100vh - 26.79em);
+    left:calc(100vh - 24em);
 
     background: linear-gradient(to bottom, #B7E8F9, #3EC9F9 93%);
 
