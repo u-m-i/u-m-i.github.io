@@ -39,7 +39,7 @@
     color:#222;
     background:linear-gradient(to top, #EEAC13 15%,#FEC440);
     border: solid #D68A3B ;
-    border-radius: 28px; 
+    border-radius: 41.444px; 
 }
 .sqr_1{
     position:absolute;
@@ -58,6 +58,6 @@
 .sqr_3{
     position: absolute;
     padding-top: .67em;
-    top:.8em;
+    top:.45em;
     right: 1.86em;
 }
