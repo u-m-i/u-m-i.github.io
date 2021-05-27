@@ -1,0 +1,103 @@
+/*
+
+This is my unique code, made with love  🌈 💚💚
+================================================
+
+Normalize a little bit
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    margin:0;
+  }
+
+body{
+    position:relative;
+}
+
+/* Background image */
+
+.bg {
+
+    min-height: 100%;
+    min-width:1024px;
+    width: 100%;
+    height: auto;
+
+    background-image:url('https://u-m-i.github.io/asset_1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Here are the commons propierties of the three yellow rectangles */
+
+.box-text{
+
+    display: inline-block;
+    position:absolute;
+    box-sizing: border-box;
+    border: solid #D68A3B;
+    border-radius: 41.444px;
+
+    text-align: center;
+    font-size: 1.87em;
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:#333;
+    background:linear-gradient(to top, #EEAC13 12.33%,#FEC440);
+}
+
+/* Each individual propierty */
+
+.rect_1{
+    width: 9.34em;
+    height: 3em;    
+    padding-top:.72em;
+    top:4.45em;
+    left: 2.9em;
+}
+
+
+.rect_2{
+    width: 10.56em;
+    height: 3.95em;
+    padding-top:.635em;
+    top:2.0122em;
+    right: 13.36em;
+}
+
+
+.rect_3{
+    width: 9.56em;
+    height: 3.2729em;
+    padding-top:.7845em;
+    top:1.0723em;
+    right: 1.89em;
+}
+
+
+.box-blue{
+    position: absolute;
+    width:26.79em;
+    height:4.988em;
+    bottom:0;
+    left:calc(100vh - 26.79em);
+
+    background: linear-gradient(to bottom, #B7E8F9, #3EC9F9 93%);
+
+    border: solid deepskyblue 0.999px;
+    border-top-left-radius: 63px 39.7781px;
+    border-bottom-left-radius:5px 50px;
+    border-top-right-radius:64.9221px 47.95px;
+    border-bottom-right-radius: 3px 70px;
+}
+
+
