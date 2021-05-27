@@ -1,37 +1,20 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
+img {
+    display: flex;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 
 
 .box-text{
     display: inline-block;
     box-sizing: border-box;
-    width: 8.99em;
-    height: 3.15em;
     text-align: center;
     font-size: 1.87em;
     font-weight: 500;
@@ -41,23 +24,49 @@
     border: solid #D68A3B ;
     border-radius: 41.444px; 
 }
+
+
 .sqr_1{
     position:absolute;
     padding-top: .67em;
-    top:4.4em;
+    top:4.45em;
     left: 2.7em;
+    width: 9em;
+    height: 3.24em;
 }
+
 
 .sqr_2{
     position: absolute;
-    padding-top: .47em;
-    top:1.72em;
-    right: 12.73em;
+    padding-top:.47em;
+    top:1.82em;
+    right: 12.99em;
+    width: 9.32em;
+    height: 3.15em;
 }
+
 
 .sqr_3{
     position: absolute;
-    padding-top: .67em;
+    padding-top:.67em;
     top:.45em;
     right: 1.86em;
+    width: 8.99em;
+    height: 3.15em;
 }
+
+
+.box-blue{
+    position:absolute;
+    bottom:0;
+    left:38.63em;
+    width:24.33em;
+    height: 4em;
+    background: linear-gradient(to bottom, #B7E8F9, #3EC9F9 95%);
+    border: solid deepskyblue 0.999px;
+    border-top-left-radius:45.44px 35.33px;
+    border-bottom-left-radius:20.19px 5.54px;
+    border-top-right-radius:24px 39.45px;
+    border-bottom-right-radius: 3px 29px;
+}
+
