@@ -1,24 +1,63 @@
-.body-div{
-    max-width: 100%;
-    max-height: 100%;
-    background-image:url('https://github.com/u-m-i/u-m-i.github.io/blob/master/interior%20casa%20indonesia%20completa.png?raw=true');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+.box-text{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 8.99em;
+    height: 3.15em;
+    text-align: center;
+    font-size: 1.87em;
+    font-weight: 500;
+    font-family:'Comic Sans';
+    color:#222;
+    background:linear-gradient(to top, #EEAC13 15%,#FEC440);
+    border: solid #D68A3B ;
+    border-radius: 28px; 
+}
+.sqr_1{
+    position:absolute;
+    padding-top: .67em;
+    top:4.4em;
+    left: 2.7em;
 }
 
-.div-image-cointainer {
-    padding-top:0.7em;
-    padding-bottom: 0.7em;
-    padding-left:8em;
-        /* background-image: url('https://github.com/u-m-i/u-m-i.github.io/blob/master/marco.png?raw=true');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;  */
+.sqr_2{
+    position: absolute;
+    padding-top: .47em;
+    top:1.72em;
+    right: 12.73em;
 }
 
-img{
-    height: 65%;
-    width: 89%;
-
+.sqr_3{
+    position: absolute;
+    padding-top: .67em;
+    top:.8em;
+    right: 1.86em;
 }
