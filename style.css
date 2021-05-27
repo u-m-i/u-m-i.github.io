@@ -4,13 +4,22 @@
     margin: 0;
 }
 
-img {
-    display: flex;
-    object-fit: cover;
+body, html {
     height: 100%;
-    width: 100%;
-}
+    margin:0;
+  }
 
+
+.bg {
+    background-image:url('asset_1.png');
+    min-height: 100%;
+    min-width:1024px;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .box-text{
     display: inline-block;
@@ -59,14 +68,14 @@ img {
 .box-blue{
     position:absolute;
     bottom:0;
-    left:38.63em;
+    left:calc(92.32vh - 24.33em) ;
     width:24.33em;
     height: 4em;
     background: linear-gradient(to bottom, #B7E8F9, #3EC9F9 95%);
     border: solid deepskyblue 0.999px;
     border-top-left-radius:45.44px 35.33px;
-    border-bottom-left-radius:20.19px 5.54px;
-    border-top-right-radius:24.11px 39.85px;
+    border-bottom-left-radius:20px 5.24px;
+    border-top-right-radius:24.39px 40.25px;
     border-bottom-right-radius: 3px 29px;
 }
 
