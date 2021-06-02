@@ -5,6 +5,6 @@
 
 #### See the challenge 🔭 [Here][page]
 
-## Thanks for the opportunitie ✨🌈
+## Thanks for the opportunity ✨🌈
 [page]: https://u-m-i.github.io/ "Here"
 
