@@ -1,0 +1,12 @@
+#All assets folder
+
+Resources/
+
+
+
+#Windows stuff
+
+.dll
+.rar
+.msi
+.exe
