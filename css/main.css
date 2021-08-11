@@ -33,13 +33,17 @@ header .header-icons-container {
 }
 
 header .header-icons-container .icons {
-    width:28em;
+    width:27.99em;
     height:auto;
     display: flex;
     justify-items: flex-end;
     align-items: center;
     justify-content: space-between;
     justify-self: end;
-    margin-right: 3.95em; 
+    margin-right: 3.98em; 
+}
+
+header .icons span {
+    color: #fff;
 }
 
