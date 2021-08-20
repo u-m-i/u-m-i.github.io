@@ -9,6 +9,7 @@ body {
     right:0;
 }
 
+
 a {
         text-decoration: none;
         display: inline;
@@ -18,15 +19,15 @@ a {
 
 header {
     width: 100%;
-    height: 12em;
+    height: 7.679em;
     display:grid;
     grid-template-rows: 1fr 1fr;
-
 }
 
+/* Green bar*/
 header .header-icons-container {
     width: 100%;
-    height:4em;
+    height:3.8em;
     display: grid;
     background-color:#47cfac;
 
@@ -47,3 +48,45 @@ header .icons span {
     color: #fff;
 }
 
+/* The white bar */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 3.90em;
+}
+
+nav .nav-logo-container{
+    margin-left:3.4em;
+
+}
+
+nav .nav-logo-container img {
+    width:13.99em; 
+    margin-top:0.82em;
+}
+
+nav .profile-link{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right:4.23em;
+}
+
+nav .profile-link a{
+    color: #333;
+    border-bottom: 1px solid #222;
+}
+
+main {
+    /*display: flex;*/
+    width:auto;
+    height:auto;
+
+}
+
+main img {
+
+    position:absolute;
+    top: calc(nav height);   
+    
+}

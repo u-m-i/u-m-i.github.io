@@ -1,9 +1,9 @@
 #All assets folder
 
 Resources/
-tst/
+tst
 assets/
-
+assets/img/
 
 #Windows stuff
 
@@ -11,3 +11,7 @@ assets/
 .rar
 .msi
 .exe
+
+# Symbolic links
+
+tst
