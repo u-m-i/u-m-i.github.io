@@ -2,9 +2,9 @@
 
 Resources/
 tst
-assets/
-assets/img/
-
+assests/
+assests/img/
+font/
 #Windows stuff
 
 .dll
