@@ -25,6 +25,11 @@
     margin-top:3.28em;
 }
 
+.grid-container {
+    max-width: 980px;
+    margin:auto;
+}
+
 .home-main-tittle {
     font-size:2em;
     font-weight:700;
