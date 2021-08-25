@@ -1,15 +1,15 @@
 body {
     font-family:'Roboto Mono';
-
     margin:0;
     padding:0;
+}
+.home-body {
     position:fixed;
     top:0;
     bottom:0;
     left:0;
     right:0;
 }
-
 
 a {
     text-decoration: none;
@@ -77,7 +77,7 @@ nav .profile-link{
 
 nav .profile-link a {
     font-size:1.69em;
-    font-style: ;
+    font-style: 'Roboto Slab', monospace ;
     color: #333;
     border-bottom: 1px solid #222;
 }
@@ -87,11 +87,4 @@ main {
     width:auto;
     height:auto;
 
-}
-
-main img {
-
-    position:absolute;
-    top: calc(nav height);   
-    
 }
