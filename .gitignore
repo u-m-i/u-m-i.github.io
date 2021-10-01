@@ -1,12 +1,17 @@
 #All assets folder
 
 Resources/
-tst/
-
-
+tst
+assests/
+assests/img/
+font/
 #Windows stuff
 
 .dll
 .rar
 .msi
 .exe
+
+# Symbolic links
+
+tst

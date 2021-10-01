@@ -1,103 +1,57 @@
-/*
+/*Imports*/
 
-This is my unique code, made with love  🌈 💚💚
-================================================
+@import url('header.css');
+@import url('news.css');
+@import url('blog.css');
+@import url('profile.css');
 
-Normalize a little bit
-*/
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,400&display=swap');
 
-body, html {
-    height: 100%;
-    margin:0;
-  }
 
-body{
-    position:relative;
-}
-
-/* Background image */
-
-.bg {
-
-    min-height: 100%;
-    min-width:1024px;
-    width: 100%;
-    height: auto;
-
-    background-image:url('https://github.com/u-m-i/u-m-i.github.io/blob/master/assests/asset_1.png?raw=true');
+.home-main {
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr; 
+    height:100%;
+    background-image: url('../assests/img/cover.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
-/* Here are the commons propierties of the three yellow rectangles */
-
-.box-text{
-
-    display: inline-block;
-    position:absolute;
-    box-sizing: border-box;
-    border: solid #D68A3B;
-    border-radius: 41.444px;
-
-    text-align: center;
-    font-size: 1.87em;
-    font-weight: 500;
-    font-family:Arial, Helvetica, sans-serif;
-
-    color:#333;
-    background:linear-gradient(to top, #EEAC13 12.33%,#FEC440);
+.home-main section {
+    display:grid;
+    grid-column: 2;
+    justify-items: center;
+    height: 10em;
+    margin-top:3.28em;
 }
 
-/* Each individual propierty */
-
-.rect_1{
-    width: 9.34em;
-    height: 3em;    
-    padding-top:.72em;
-    top:4.45em;
-    left: 2.9em;
+.grid-container {
+    max-width: 980px;
+    margin:auto;
 }
 
+.home-main-tittle {
+    font-size:2em;
+    font-weight:700;
+    font-family: 'Roboto mono', monospace;
+    letter-spacing: 0.0599em;
+    text-align:center;
+    color:#eee;
+}
 
-.rect_2{
-    width: 10.56em;
-    height: 3.95em;
-    padding-top:.635em;
-    top:2.0122em;
-    right: 13.36em;
+.home-main-button{
+    display:grid;
+    align-items:center;
+    border-style: none;
+    width: 6.7em;
+    height:3.5em;
+    background:#47cfac ;
 }
 
 
-.rect_3{
-    width: 9.56em;
-    height: 3.2729em;
-    padding-top:.7845em;
-    top:1.0723em;
-    right: 1.89em;
+.home-main-button a{
+    font-weight: 700;
+    font-size: 1.3em;
 }
-
-
-.box-blue{
-    position: absolute;
-    width:26.79em;
-    height:4.988em;
-    bottom:0;
-    left:calc(100vh - 13.395em);
-
-    background: linear-gradient(to bottom, #B7E8F9, #3EC9F9 93%);
-
-    border: solid deepskyblue 0.999px;
-    border-top-left-radius: 63px 39.7781px;
-    border-bottom-left-radius:5px 50px;
-    border-top-right-radius:64.9221px 47.95px;
-    border-bottom-right-radius: 3px 70px;
-}
-
-

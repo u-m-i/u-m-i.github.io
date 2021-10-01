@@ -1,0 +1,49 @@
+.blogpost-img-container {
+    padding: 0 2.8em 2.1em;
+
+}
+
+.blogpost-img-container img {
+    width:100%;
+}
+
+.blogpost-main-container h3{
+    padding-bottom:1.2em;
+    font-weight: 700;
+    text-align:left;
+    border-bottom: 1px solid #cdd2da;
+
+}
+
+.blogpost-main-container article h1 {
+    font-size: 2.3em;
+}
+
+.contact-main-container {
+    width:100%;
+    min-height: 12em;
+    background-color: #e6e9ed;
+    text-align:center;
+    padding:3em;
+}
+
+.contact-main-container div{
+    display: inline-block;
+    width:48.89%;
+    height:100%;
+}
+
+.contact-main-container div a {
+    border-bottom: 1px solid #000;
+    padding-bottom:5px;
+
+}
+
+.contact-main-container div img {
+    width:9.13em;
+}
+
+.contact-main-container .contact-left, .contact-right {
+    text-align: initial;
+    margin-top: 3em;
+}
