@@ -4,10 +4,10 @@ import glassImg from './glass.png';
 import logImg from './log.jpg';
 import woodImg from './wood.png';
 
-export {
+export{
 	dirtImg,
 	grassImg,
 	glassImg,
-	woodImg,
 	logImg,
+	woodImg,
 }
