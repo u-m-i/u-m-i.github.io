@@ -7,9 +7,9 @@ export const Cubes = () =>
         state.cubes
     ]);
 
-    return cubes.map(({key ,x,y,z, texture}) => {
+    return cubes.map(({key ,pos, texture}) => {
         return(
-            <Cube key={key} position={position}/>
+            <Cube key={key} position={pos} texture={texture}/>
         )
     });
 }
