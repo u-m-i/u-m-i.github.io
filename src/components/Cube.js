@@ -1,6 +1,6 @@
+import React, {Component} from "react";
 import * as textures from "../images/texture";
 import { useBox } from "@react-three/cannon";
-
 
 export const Cube = ({position, texture}) =>
 {

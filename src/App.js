@@ -1,5 +1,6 @@
 import {FPV} from './components/FPV';
 import { Sky } from '@react-three/drei';
+import React, { Component } from "react";
 import {Cubes} from './components/Cubes';
 import { Canvas } from '@react-three/fiber';
 import { Player } from './components/Player';
@@ -19,7 +20,7 @@ function App() {
           <Ground/>
         </Physics>
       </Canvas>
-      <div className ="absolute centered cursor"></div>
+      <div className ="absolute centered cursor">+</div>
     </>
   );
 }

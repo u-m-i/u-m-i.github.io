@@ -1,3 +1,4 @@
+import React,{Component} from "react";
 import { useThree } from "@react-three/fiber";
 import {PointerLockControls} from "@react-three/drei";
 

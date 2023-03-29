@@ -1,8 +1,9 @@
-import { Vector3 } from 'three'
-import {useEffect, useRef } from 'react'
-import { useSphere } from '@react-three/cannon'
-import { useKeyboard } from '../hooks/userKeyboard'
-import { useFrame,useThree } from '@react-three/fiber'
+import { Vector3 } from 'three';
+import {useEffect, useRef } from 'react';
+import React, {Component} from "react";
+import { useSphere } from '@react-three/cannon';
+import { useKeyboard } from '../hooks/userKeyboard';
+import { useFrame,useThree } from '@react-three/fiber';
 
 const JUMP_STRENGTH = 6;
 const SPEED = 4;
