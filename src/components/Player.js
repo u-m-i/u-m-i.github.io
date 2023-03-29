@@ -9,7 +9,7 @@ const SPEED = 4;
 
 export const Player = () =>
 {
-    const { moveBackward, moveForward, moveRight, moveLeft, jump, inputs}= useKeyboard();
+    const { moveBackward, moveForward, moveRight, moveLeft, jump}= useKeyboard();
 
     const {camera} = useThree();
 
