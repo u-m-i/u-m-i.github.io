@@ -22,7 +22,7 @@ window.customElements.define("video-record", VideoRecord);
 
 /*
 * Request all media disposable, this assumes that the microphone and camera are needed
-* Returns {DevicesMediaStream} stream from microphone and camera
+* Returns {MediaStreamTrack} stream from microphone and camera
 */
 async function resolveMedia()
 {
@@ -75,7 +75,6 @@ async function saveToRemoteDisk( event )
 
    });
 
-
    // Take the params and create the next request
    URL.revokeObjectURL(inner_path);
 }
@@ -112,7 +111,7 @@ async function recordVideo()
 
 async function getPresignUrl(file_metadata)
 {
-   let url = "35.238.199.84";
+   let url = "http://35.238.199.84:7726/presigned";
 
    let request = 
       {
@@ -134,7 +133,7 @@ async function storeRecord()
 
    storeRecord.mediaRecorder.stop();
 
-   storeRecord.videoScreen.srcObject.getTracks().forEach((track) => track.stop());
+   storeRecord.videoScreen.srcObject.getTracks().forEach( (track) => track.stop() );
 
    // Clean the video screen
    storeRecord.videoScreen.pause();
