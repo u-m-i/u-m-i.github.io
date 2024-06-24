@@ -111,7 +111,7 @@ async function recordVideo()
 
 async function getPresignUrl(file_metadata)
 {
-   let url = "http://35.238.199.84:7726/presigned";
+   let url = "https://servicenuruk.realitynear.org:7726/presigned";
 
    let request = 
       {
