@@ -1,0 +1,24 @@
+
+video-record
+{
+   text-align : center;
+}
+
+div.video-record-actions__div
+{
+   margin : auto;
+   user-select : none;
+}
+
+
+video.record-screen__video
+{
+   margin : auto;
+}
+
+input.video-file__input
+{
+
+}
+
+

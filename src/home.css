@@ -1,0 +1,110 @@
+@font-face
+{
+   font-family: 'Rubik';
+   src: url("../static/Rubik-Italic-VariableFont_wght.ttf");
+}
+
+body
+{
+   margin-top: 0;
+   margin-left: 0;
+   margin-right:0;
+
+   padding-left: 6px;
+   padding-right: 6px;
+
+   /*width: 100wh;*/
+   height: 100%;
+
+   background-color: rgba(50,115,192,0.6) ;
+
+   font-family: 'Rubik';
+}
+
+/*
+ * Variables:
+ * brand logo height
+ * brand div margin top bottom
+ * nav bar margin top bottom
+ * */
+
+
+.brand-logo
+{
+   /*Do not make the asumption that the parent could have user-selec:none*/
+
+   margin:auto;
+   margin-bottom: 0.7rem;
+
+   width: calc(881px/2);
+   height: calc(187px/2);
+
+   display: block;
+
+   user-select: none;
+}
+
+div.brand-band__div
+{
+   margin:auto;
+
+   padding-top: 0.35rem;
+   padding-left:0.2rem;
+   padding-bottom: 0.52rem;
+
+   align-content: center;
+   text-align: center;
+
+   border-radius: 2px;
+   backdrop-filter: blur(10px);
+   box-shadow: 0 4px 90px rgba(0.0, 0.0, 0.0, 0.2);
+
+   user-select: none;
+}
+
+/* Navigation bar */
+
+nav.generic-nav-bar__nav
+{
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+
+   text-align:center;
+
+   user-select: none;
+}
+
+nav.generic-nav-bar__nav>button.panel-option__button
+{
+   padding-top: 4px;
+   padding-bottom: 2px;
+
+   border: none;
+
+   font-size: 16px;
+   text-decoration: underline;
+   background-color: transparent;
+
+}
+
+
+/* Take the difference between the total screen and the nav bar plus the brand*/
+main.information__main
+{
+   height:max-content;
+   min-height:100vh;
+
+
+   padding-top: 1.5rem;
+   padding-left: 2rem;
+
+   padding-right: 2rem;
+   padding-bottom: 1.8rem;
+
+   margin:auto;
+
+   border-radius: 5px;
+   box-shadow: 1px 5px 90px rgba(0.0, 0.0, 0.0, 0.3);
+
+   backdrop-filter: blur(18px);
+}
