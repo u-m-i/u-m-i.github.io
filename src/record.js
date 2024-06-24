@@ -75,10 +75,8 @@ async function saveToRemoteDisk( event )
    let request = 
       { 
          method : "POST", 
-         headers: {
-            "Access-Control-Allow-Origin" : "*",
-         },
-         body : body 
+         mode   : "no-cors",
+         body   : body 
    };
 
    await fetch(params.url, request).then( (result) => {
