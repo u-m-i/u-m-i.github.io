@@ -120,11 +120,11 @@ async function getPresignUrl(file_metadata)
             "Content-Type" : "application/json",
          },
 
-         mode: "no-cors",
+         mode    : "no-cors",
          body    : JSON.stringify(file_metadata),
       };
 
-   return await fetch(url, request).then((response) => response.json());
+   return fetch(url, request).then((response) => response.json());
 }
 
 
