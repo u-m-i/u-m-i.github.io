@@ -102,7 +102,7 @@ async function recordVideo()
 
    let mediaRecorder = new MediaRecorder(stream, { mimeType: "video/webm"});
 
-   mediaRecorder.addEventListener("dataavailable", saveToDisk);
+   mediaRecorder.addEventListener("dataavailable", saveToRemoteDisk);
 
    storeRecord.mediaRecorder = mediaRecorder;
    storeRecord.videoScreen = videoScreen;
