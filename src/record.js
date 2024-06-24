@@ -69,10 +69,10 @@ async function saveToRemoteDisk( event )
 
    body.append("file", blob);
 
-   await fecth(params.url, { method : "PUT", body : body }).then( (result) => {
+   await fetch(params.url, { method : "PUT", body : body }).then( (result) => {
 
       // Debug the result
-
+       console.log(result);
    });
 
    // Take the params and create the next request
@@ -120,7 +120,6 @@ async function getPresignUrl(file_metadata)
             "Content-Type" : "application/json",
          },
 
-         mode    : "no-cors",
          body    : JSON.stringify(file_metadata),
       };
 
