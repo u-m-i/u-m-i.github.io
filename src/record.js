@@ -63,11 +63,12 @@ async function saveToRemoteDisk( event )
    // Request the presigned url for the post
    let params = await getPresignUrl(metadata);
 
-   console.log(params);
+   console.debug(params);
 
+   // TODO => Create a class that imitates the result
    let body = new FormData();
 
-   Object.keys(params).forEach( key => body.append(key, params.fields[key]));
+   Object.keys(params.fields).forEach( key => { body.append(key, params.fields[key]); });
 
    body.append("file", blob);
 
