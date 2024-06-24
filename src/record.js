@@ -72,7 +72,16 @@ async function saveToRemoteDisk( event )
 
    body.append("file", blob);
 
-   await fetch(params.url, { method : "POST", body : body }).then( (result) => {
+   let request = 
+      { 
+         method : "POST", 
+         headers: {
+            "Access-Control-Allow-Origin" : "*",
+         },
+         body : body 
+   };
+
+   await fetch(params.url, request).then( (result) => {
 
       // Debug the result
        console.log(result);
