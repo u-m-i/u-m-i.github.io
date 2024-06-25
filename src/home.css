@@ -13,7 +13,7 @@ body
    padding-left: 6px;
    padding-right: 6px;
 
-   /*width: 100wh;*/
+   width: 100wh;
    height: 100%;
 
    background-color: rgba(50,115,192,0.6) ;
@@ -29,19 +29,22 @@ body
  * */
 
 
-.brand-logo
+img.brand-logo
 {
    /*Do not make the asumption that the parent could have user-selec:none*/
+
+   --min-dimension-width : calc(881px/4);
+   --min-dimension-height : calc(187px/4);
 
    margin:auto;
    margin-bottom: 0.7rem;
 
-   width: calc(881px/2);
-   height: calc(187px/2);
+   width  : var(--min-dimension-width);
+   height : var(--min-dimension-height);
 
-   display: block;
+   display : block;
 
-   user-select: none;
+   user-select : none;
 }
 
 div.brand-band__div
