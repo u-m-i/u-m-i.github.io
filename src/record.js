@@ -77,10 +77,11 @@ async function saveToRemoteDisk( event )
          body    : body,
       };
 
-   await fecth(params.url, request).then( (result) => {
+   await fetch(params.url, request).then( (result) => {
 
       // Debug the result
-
+       
+       console.debug(result);
       teller.textContent = "Video subido con exito";
    });
 }
