@@ -66,7 +66,7 @@ async function saveToRemoteDisk( event )
 
    let body = new FormData();
 
-   Object.keys(params).forEach( key => body.append(key, params[key]));
+   Object.keys(params.fields).forEach( key => { body.append(key, params.fields[key]) });
 
    body.append("file", blob);
 
