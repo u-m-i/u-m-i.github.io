@@ -15,6 +15,7 @@ class VideoRecord extends HTMLElement
       <input class="video-file__input" type="file">
       <p id="teller__p"></p>
       `;
+
    }
 }
 
@@ -78,10 +79,9 @@ async function saveToRemoteDisk( event )
       };
 
    await fetch(params.url, request).then( (result) => {
-
       // Debug the result
-       
-       console.debug(result);
+      
+      console.debug(result);
       teller.textContent = "Video subido con exito";
    });
 }
@@ -160,28 +160,3 @@ async function storeRecord()
 }
 
 let main = document.getElementsByTagName("main")[0];
-
-let actioners = document.getElementsByClassName("record-type__button");
-
-let audioActioner = actioners[0];
-let videoActioner = actioners[1];
-let textActioner = actioners[2];
-
-videoActioner.onclick = async (event) => 
-{
-   event.preventDefault();
-
-   event.target.setAttribute("disabled", "");
-
-   // Instantiate the video-record
-   let videoRecord = new VideoRecord();
-
-   main.appendChild(videoRecord);
-
-   // Set all buttons
-   let recordButton = document.getElementsByClassName("video-record__button")[0];
-   let stopButton = document.getElementsByClassName("stop-record__button")[0];
-
-   recordButton.onclick = recordVideo;
-   stopButton.onclick = storeRecord;
-};
