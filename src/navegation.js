@@ -28,7 +28,7 @@ class SignForm extends HTMLElement
 
       let form = document.getElementsByClassName("sign-account__form")[0];
 
-      form.addEventListener("submit", sing = async (event) => {
+      form.addEventListener("submit",  async (event) => {
 
          event.preventDefault();
 
@@ -76,7 +76,7 @@ class SignForm extends HTMLElement
 
       let newAccount = document.getElementsByClassName("new-account__form")[0];
 
-      newAccount.addEventListener("submit", signup = async (event) => 
+      newAccount.addEventListener("submit", async (event) => 
          {
             event.preventDefault();
 
