@@ -6,17 +6,18 @@
 
 body
 {
-   margin-top: 0;
-   margin-left: 0;
-   margin-right:0;
+   margin : 0;
 
-   padding-left: 6px;
-   padding-right: 6px;
+   padding : 0px 0px;
 
-   width: 100wh;
+   width: 100vw;
    height: 100%;
 
-   background-color: rgba(50,115,192,0.6) ;
+   /* Custom variables */
+
+   --main-background-color : rgba(50,115,192,0.6) ;
+
+   background-color: var(--main-background-color);
 
    font-family: 'Rubik';
 }
@@ -28,7 +29,6 @@ body
  * nav bar margin top bottom
  * */
 
-
 img.brand-logo
 {
    /*Do not make the asumption that the parent could have user-selec:none*/
@@ -36,34 +36,65 @@ img.brand-logo
    --min-dimension-width : calc(881px/4);
    --min-dimension-height : calc(187px/4);
 
-   margin:auto;
-   margin-bottom: 0.7rem;
+   margin        : auto;
+   margin-bottom : 0.7rem;
 
    width  : var(--min-dimension-width);
    height : var(--min-dimension-height);
 
    display : block;
 
+   backdrop-filter         : none;
+   -webkit-backdrop-filter : none;
+
    user-select : none;
+}
+
+q.brand-quote__q
+{
+   backdrop-filter         : none;
+   -webkit-backdrop-filter : blur(0px);
+
+   filter         : none;
+   -webkit-filter : none;
 }
 
 div.brand-band__div
 {
-   margin:auto;
+   margin       : auto;
+   margin-left  : 3px;
+   margin-right : 3px;
 
-   padding-top: 0.35rem;
-   padding-left:0.2rem;
-   padding-bottom: 0.52rem;
+   position : relative;
 
-   align-content: center;
-   text-align: center;
+   padding-top    : 0.35rem;
+   padding-left   : 0.2rem;
+   padding-bottom : 0.52rem;
 
-   border-radius: 2px;
-   backdrop-filter: blur(10px);
-   box-shadow: 0 4px 90px rgba(0.0, 0.0, 0.0, 0.2);
+   align-content : center;
+   text-align    : center;
+
+   border-radius : 4px;
+   box-shadow    : 0 4px 90px rgba(0.0, 0.0, 0.0, 0.2);
 
    user-select: none;
 }
+
+/*div.brand-band__div::before
+{
+   content : "";
+
+   width   : 100%;
+   height  : 100%;
+
+   position : absolute;
+   backdrop-filter : blur(10px);
+}*/
+
+/*div.brand-band__div:not(q)
+{
+   backdrop-filter: blur(10px);
+}*/
 
 /* Navigation bar */
 
@@ -84,30 +115,28 @@ nav.generic-nav-bar__nav>button.panel-option__button
 
    border: none;
 
-   font-size: 16px;
+   font-size : 16px;
    text-decoration: underline;
    background-color: transparent;
-
 }
 
 
 /* Take the difference between the total screen and the nav bar plus the brand*/
 main.information__main
 {
-   height:max-content;
-   min-height:100vh;
+   height    : max-content;
+   min-height: 100vh;
 
+   padding-top  : 1.5rem;
+   padding-left : 2rem;
 
-   padding-top: 1.5rem;
-   padding-left: 2rem;
+   padding-right  : 2rem;
+   padding-bottom : 1.8rem;
 
-   padding-right: 2rem;
-   padding-bottom: 1.8rem;
+   margin : auto;
 
-   margin:auto;
+   border-radius : 5px;
+   box-shadow    : 1px 5px 90px rgba(0.0, 0.0, 0.0, 0.3);
 
-   border-radius: 5px;
-   box-shadow: 1px 5px 90px rgba(0.0, 0.0, 0.0, 0.3);
-
-   backdrop-filter: blur(18px);
+   /*backdrop-filter: blur(18px);*/
 }

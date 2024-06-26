@@ -101,4 +101,13 @@ ul.record-types__ul>li.record-type__li
    list-style-type : none;
 }
 
+@media (width : 430px) and (height : 932px )
+{
+   ul.record-types__ul
+   {
+      padding-top : 1rem;
+      padding-left : 0;
+      font-style : italic;
 
+   }
+}
