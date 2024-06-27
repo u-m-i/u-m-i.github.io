@@ -45,6 +45,9 @@ class SignForm extends HTMLElement
 
          let request = {
             method : "POST",
+         headers: {
+            "Content-Type" : "application/json",
+         },
             body   : body,
          };
 
@@ -92,6 +95,9 @@ class SignForm extends HTMLElement
 
             let request = {
                method : "POST",
+                headers : {
+                    "Content-Type" : "application/json",
+                },
                body   : body,
             };
 
