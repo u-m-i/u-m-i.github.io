@@ -10,6 +10,7 @@ class VideoRecord extends HTMLElement
       <div class="video-record-actions__div">
          <button class="video-record__button">Record</button>
          <button class="stop-record__button">Stop</button>
+         <input type="text" placeholder="Nombre del archivo" class="file-name__input">
       </div>
       <video autoplay muted playsinline class="record-screen__video"></video>
       <input class="video-file__input" type="file">
@@ -25,7 +26,7 @@ window.customElements.define("video-record", VideoRecord);
 
 /*
 * Request all media disposable, this assumes that the microphone and camera are needed
-* @return {DevicesMediaStream} stream from microphone and camera
+* @returns {DevicesMediaStream} stream from microphone and camera
 */
 async function resolveMedia()
 {
@@ -57,10 +58,25 @@ async function saveToRemoteDisk( event )
 {
    let blob = new Blob([event.data], { type : "video/webm" });
 
+   let date = new Date();
+
+   let userNaming = document.getElementsByClassName("file-name__input")[0];
+
    let metadata = {
-      name : "demo_video_example.webm",
-      type : "video/webm",
+
+      // Sanitize the name
+      name : `${userNaming.value}.webm`,
+      mimetype : "video/webm",
+      extension : "webm",
+      // Take the date in ISO 8601 with the local time
+      date : new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString(),
+      // Take the encoding
+      encoding : "binary",
+      // Weight in bytes
+      weight : blob.size,
+
    };
+
 
    // Request the presigned url for the post
    let params = await getPresignedUrl(metadata);
@@ -78,11 +94,13 @@ async function saveToRemoteDisk( event )
          body    : body,
       };
 
-   await fetch(params.url, request).then( (result) => {
+   await fetch(params.url, request).then( (response) => {
       // Debug the result
-      
-      console.debug(result);
+      console.debug(response);
       teller.textContent = "Video subido con exito";
+   }).catch( (error) => 
+   {
+      teller.textContent = "Algo a ocurrido vuelve porfavor a intentar subirlo";
    });
 }
 

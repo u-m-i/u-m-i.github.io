@@ -44,11 +44,11 @@ class SignForm extends HTMLElement
          let body = JSON.stringify(structure);
 
          let request = {
-            method : "POST",
-         headers: {
-            "Content-Type" : "application/json",
-         },
-            body   : body,
+            method  : "POST",
+            headers :{
+               "Content-Type" : "application/json",
+            },
+            body    : body,
          };
 
          await fetch("https://servicenuruk.realitynear.org:7726/presigned", request).then((response) =>
@@ -58,11 +58,11 @@ class SignForm extends HTMLElement
 
                if(!response.ok)
                {
-                  div.textContent = "Something failed in the way, try again or contact support";
+                  div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
                   throw new Error("Something went wrong");
                }
 
-               div.textContent = "Enjoy your time!";
+               div.textContent = "Disfruta tu tiempo aquí";
 
                this.appendChild(div);
 
@@ -94,11 +94,11 @@ class SignForm extends HTMLElement
             let body = JSON.stringify(structure);
 
             let request = {
-               method : "POST",
-                headers : {
-                    "Content-Type" : "application/json",
-                },
-               body   : body,
+               method  : "POST",
+               headers :{
+                  "Content-Type" : "application/json",
+               },
+               body    : body,
             };
 
             await fetch("https://servicenuruk.realitynear.org:7726/signup", request).then( (response) =>
@@ -107,11 +107,11 @@ class SignForm extends HTMLElement
 
                   if(!response.ok)
                   {
-                     div.textContent = "Something failed in the way, try again or contact support";
+                     div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
                      throw new Error("Something went wrong");
                   }
 
-                  div.textContent = "You have been sign up! Login to use your new dashboard";
+                  div.textContent = "¡Te has registrado! Ingresa para que pruebes tus nuevas herramientas";
 
                   this.appendChild(div);
                })
