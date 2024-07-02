@@ -74,7 +74,7 @@ class SignForm extends HTMLElement
          });
       });
 
-      let newAccount = document.getElementsByClassName("new-account__form")[0];
+      let newAccount = document.getElementsByClassName("sign-account__form")[1];
 
       newAccount.addEventListener("submit", async (event) => 
          {
@@ -379,3 +379,43 @@ form.addEventListener("submit",  async (event) => {
          loadDashboard();
    });
 });
+
+let newAccount = document.getElementsByClassName("sign-account__form")[1];
+
+newAccount.addEventListener("submit", async (event) => 
+   {
+      event.preventDefault();
+
+      // Get the form content
+      let formattedData = new FormData(event.target);
+
+      let structure = {};
+
+      for(const [key,value] of formattedData.entries())
+         structure[key] = value;
+
+      let body = JSON.stringify(structure);
+
+      let request = {
+         method  : "POST",
+         headers :{
+            "Content-Type" : "application/json",
+         },
+         body    : body,
+      };
+
+      await fetch("https://servicenuruk.realitynear.org:7726/signup", request).then( (response) =>
+         {
+            let div = document.createElement("div");
+
+            if(!response.ok)
+            {
+               div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
+               throw new Error("Something went wrong");
+            }
+
+            div.textContent = "¡Te has registrado! Ingresa para que pruebes tus nuevas herramientas";
+
+            this.appendChild(div);
+         })
+   });

@@ -99,11 +99,27 @@ form.sign-account__form>input::placeholder
    font-size   : 1.2rem;
 }
 
+form.sign-account__form>input.new-account-field__input:nth-child(1),
 form.sign-account__form>input:nth-child(1)
 {
    border-radius : 23px 23px 0 0;
    background    : var(--default);
 }
+
+form.sign-account__form>input.new-account-field__input:nth-child(2)
+{
+   border-radius : 0;
+   margin-bottom : 0.2rem;
+}
+
+form.sign-account__form>input.new-account-field__input:nth-child(4)
+{
+   margin-top    : 3px;
+   margin-bottom : 1rem;
+   border-radius : 0 0 23px 23px;
+   background : var(--default);
+}
+
 form.sign-account__form>input:nth-child(2)
 {
    margin-top    : 3px;
@@ -112,11 +128,12 @@ form.sign-account__form>input:nth-child(2)
    background : var(--default);
 }
 
+
 button.generic-blue__button
 {
-   padding : 9px 10px;
+   padding : 9px 12px;
    margin  : 40px 0 38px 0;
-   width : 145px;
+   width : max-content;
    border        : none;
    border-radius : 30px;
    background-color : var(--aqua);
@@ -126,6 +143,7 @@ button.generic-blue__button
    font-weight : 300;
    cursor : pointer;
 }
+
 
 
 form.new-account__form
