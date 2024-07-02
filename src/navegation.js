@@ -372,7 +372,7 @@ form.addEventListener("submit",  async (event) => {
 
          div.textContent = "Disfruta tu tiempo aquí";
 
-         this.appendChild(div);
+         form.appendChild(div);
 
          await sleep(2000);
 
@@ -416,6 +416,6 @@ newAccount.addEventListener("submit", async (event) =>
 
             div.textContent = "¡Te has registrado! Ingresa para que pruebes tus nuevas herramientas";
 
-            this.appendChild(div);
+            newAccount.appendChild(div);
          })
    });
