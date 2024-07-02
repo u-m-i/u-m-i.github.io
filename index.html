@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="src/home.css">
-   <link rel="stylesheet" href="src/forms.css">
-   <link rel="stylesheet" href="src/footer.css">
-   <link rel="stylesheet" href="src/video_record.css">
+   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/forms.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/videoRecord.css">
+   <link rel="stylesheet" href="css/homeInformation.css">
+   <link rel="stylesheet" href="css/aboutUs.css">
 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes, user-scalable=no">
@@ -14,19 +16,51 @@
 </head>
 <body>
    <div class="brand-band__div">
-      <img class="brand-logo" src="../static/logo-removebg-preview.png" alt="">
-      <q class="brand-quote__q ">Keep your memories and knowledge always alive</q>
+      <q class="welcome-quote__q">Bienvenido a</q>
+      <img class="brand-logo__img" src="../static/logo.png" alt="Reality Life logo">
+      <q class="brand-quote__q">Mantén tus <b>recuerdos</b>, tus <b>conocimientos</b> y tu <b>legado siempre vivos</b>.</q>
    </div>
    <nav class="generic-nav-bar__nav">
-      <button class="panel-option__button">Home</button>
-      <button class="panel-option__button">About us</button>
-      <button class="panel-option__button">Team</button>
-      <button class="panel-option__button">Demo</button>
-      <button class="panel-option__button">Pricing</button>
-      <button class="panel-option__button">Contact us</button>
-      <button class="panel-option__button">Sign In</button>
+      <button class="panel-option__button">NOSOTROS</button>
+      <button class="panel-option__button">EQUIPO</button>
+      <button class="panel-option__button">PLANES</button>
+      <button class="panel-option__button">DEMO</button>
+      <button class="panel-option__button">CONTACTO</button>
+      <button class="panel-option__button generic-blue__button">INICIA SESIÓN</button>
+      <button class="panel-option__button language-button"><img src="../static/language-icon.png" alt="Select language">Español</button>
    </nav>
    <main class="information__main">
+      <!--<p class="home-router__p">HOME > <b>NOSOTROS</b></p>-->
+      <article class="home__article">
+         <aside class="home-left__aside">
+            <img src="../static/manor.png">
+            <span class="globe-decoration__span">
+               <img src="../static/globe.png">
+               <p>Recuerdos</p>
+            </span>
+            <span class="globe-decoration__span">
+               <img src="../static/globe.png">
+               <p>Acompañamiento</p>
+            </span>
+            <span class="globe-decoration__span">
+               <img src="../static/globe.png">
+               <p>Tecnología</p>
+            </span>
+         </aside>
+         <aside class="home-right__aside">
+            <p>Reality LIFE es una plataforma que preserva tus recuerdos, conocimientos y legado, enfrentando la muerte y enfermedades mentales como el alzheimer y la demencia. Utilizando tecnología Blockchain e Inteligencia Artificial, crea un avatar digital interactivo que permite a tus seres queridos mantener una conexión eterna contigo.</p>
+            <p>Nuestra tecnología asegura la seguridad y autenticidad de tus datos, ofreciendo una experiencia inmersiva a través de realidad virtual y aumentada. Reality LIFE no solo almacena datos, sino que preserva tu legado emocional e intelectual, proporcionando consuelo y compañía constante a tus seres queridos.</p>
+         </aside>
+      </article>
+      <button class="call-to-action__button generic-blue__button">COMIENZA AHORA</button>
+      <q class="generic-quote__q">¡Empieza a almacenar tu legado hoy mismo!</q>
+      <form method="POST" class="sign-account__form">
+         <input type="email" name="email" placeholder="INGRESA TU CORREO">
+         <input type="password" name="password" placeholder="INGRESA TU CONTRASEÑA">
+         <a>¿Olvidaste la contraseña?</a>
+         <button type="submit" class="generic-blue__button">INGRESAR</button>
+         <p>¿Todavía no tienes una cuenta? <a href="">Regístrate aquí</a></p>
+      </form>
    </main>
    <a href="" download="" id="invisible-anchor__a"></a>
    <script src="src/record.js"></script>
@@ -37,7 +71,7 @@
       <a href="" class="terms-link__a"></a>
       <a href="" class="privacy-link__a"></a>
       <a href="" class="cookies-link__a"></a>
-      <p class="copyright__p">Copyright</p>
+      <p class="copyright__p">Copyright Realtiy Near</p>
    </footer>
 </body>
 </html>

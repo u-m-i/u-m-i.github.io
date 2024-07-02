@@ -13,10 +13,8 @@ class VideoRecord extends HTMLElement
          <input type="text" placeholder="Nombre del archivo" class="file-name__input">
       </div>
       <video autoplay muted playsinline class="record-screen__video"></video>
-      <input class="video-file__input" type="file">
       <p id="teller__p"></p>
       `;
-
    }
 }
 
@@ -62,6 +60,10 @@ async function saveToRemoteDisk( event )
 
    let userNaming = document.getElementsByClassName("file-name__input")[0];
 
+   console.debug(userNaming);
+
+   console.assert(userNaming.value.length == 0);
+
    let metadata = {
 
       // Sanitize the name
@@ -77,6 +79,7 @@ async function saveToRemoteDisk( event )
 
    };
 
+   console.debug(metadata);
 
    // Request the presigned url for the post
    let params = await getPresignedUrl(metadata);

@@ -1,26 +1,26 @@
 
+function loadDashboard()
+{
+   // Erase all the children
+   let main = document.getElementsByClassName("information__main")[0];
+   main.replaceChildren();
+
+   let dashboard = new Dashboard();
+   // Append the dashboard
+   main.appendChild(dashboard);
+}
+
 class SignForm extends HTMLElement
 {
    connectedCallback()
    {
       this.innerHTML = `
-      <ul class="sign-options__ul">
-         <li class="sign-option__li"><button class="sign-option__button">Sign In</button></li>
-         <li class="sign-option__li"><button class="sign-option__button">Sign Up</button></li>
-      </ul>
-
       <form method="POST" class="sign-account__form">
-         <input type="email" name="email" placeholder="Email">
-         <input type="password" name="password" placeholder="Password">
-         <button type="submit">Sign In</button>
-      </form>
-
-      <form method="POST" class="new-account__form">
-         <input type="text" name="forename" placeholder="Name">
-         <input type="text" name="surname" placeholder="Last name">
-         <input type="email" name="email" placeholder="Email">
-         <input type="password" name="password" placeholder="Password">
-         <button type="submit">Sign Up</button>
+         <input type="email" name="email" placeholder="INGRESA TU CORREO">
+         <input type="password" name="password" placeholder="INGRESA TU CONTRASEÑA">
+         <a>¿Olvidaste la contraseña?</a>
+         <button type="submit" class="generic-blue__button">INGRESAR</button>
+         <p>¿Todavía no tienes una cuenta? <a href="">Regístrate aquí</a></p>
       </form>
       `;
 
@@ -51,7 +51,7 @@ class SignForm extends HTMLElement
             body    : body,
          };
 
-         await fetch("https://servicenuruk.realitynear.org:7726/presigned", request).then((response) =>
+         await fetch("https://servicenuruk.realitynear.org:7726/sign", request).then( async (response) =>
             {
 
                let div = document.createElement("div");
@@ -66,13 +66,10 @@ class SignForm extends HTMLElement
 
                this.appendChild(div);
 
-               // Render the dashboard.
+               await sleep(2000);
 
-               let main = document.getElementsByClassName("information__main")[0];
+               loadDashboard();
 
-               let dashboard = document.createElement("record-options");
-
-               main.appendChild(dashboard);
 
          });
       });
@@ -125,15 +122,15 @@ class AboutUs extends HTMLElement
    connectedCallback()
    {
       this.innerHTML = `
-      <article>
-         <span class="aboutus__left-side">
-            <img src="" alt="">
-         </span>
-         <aside class="aboutus__rigth-side">
-            <h2>Heading</h2>
-            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde esse sed sit, tenetur itaque praesentium reprehenderit beatae tempore autem, voluptate odit quaerat. Id adipisci, reprehenderit dignissimos est perferendis assumenda alias!</b>
-            <p>Dejar claro que hacemos</p>
-         </aside>
+      <article class="about-us__article">
+         <p class="paragraph__p">Reality LIFE es una multiplataforma diseñada para mantener vivos tus recuerdos, conocimientos y legado. Enfrentamos la inevitabilidad de la muerte y las enfermedades mentales como el alzheimer y la demencia con una solución que asegura que nunca dejes de ser un apoyo para tus seres queridos. Con Reality LIFE, tus experiencias y sabiduría perduran y continúan guiando a tus familiares y amigos, ofreciendo una conexión eterna e inquebrantable.</p>
+         <p class="paragraph__p">Nuestro objetivo es transformar la manera en que te relacionas con tus seres queridos, incluso después de haber partido. En Reality LIFE, preservamos tus recuerdos más valiosos, anécdotas y conocimientos, y los convertimos en un avatar digital interactivo. Permitimos que tus familiares y amigos interactúen contigo de una manera inmersiva y gamificada, asegurando que tus datos sean protegidos y permanezcan inalterados a través de la tecnología Blockchain.</p>
+         <img class="paragraph-image__img" src="../static/white-pane.png">
+         <p class="paragraph__p">Utilizamos Inteligencia Artificial para capturar y replicar tu personalidad, tus respuestas y tu estilo único de comunicación. Garantizamos la seguridad y autenticidad de tus recuerdos y datos personales, asegurando que solo aquellos que tú elijas tengan acceso. Ofrecemos experiencias de interacción a través de realidad virtual y aumentada, permitiendo que tus seres queridos sientan tu presencia de una manera conmovedora y real.</p>
+         <img class="paragraph-image__img" src="../static/white-pane.png">
+         <p class="paragraph__p">En Reality LIFE, no solo almacenamos datos, sino que preservamos tu legado emocional e intelectual. Imagina un futuro donde tus hijos, nietos y generaciones venideras puedan conversar contigo, aprender de tus experiencias y sentir tu apoyo constante. Nuestra plataforma no solo honra tu vida, sino que también la celebra, brindando consuelo y compañía a tus seres queridos.</p>
+         <p class="paragraph__p">No dejes que el tiempo borre tu impacto en la vida de quienes amas. Con Reality LIFE, tu esencia permanecerá viva y activa, proporcionando un apoyo continuo y valioso. Convierte tus recuerdos en un legado eterno y asegúrate de que tu voz nunca se apague. Reality LIFE: Tu Vida, Tu Legado, Siempre Vivo.</p>
+         <button class="call-to-action__button generic-blue__button">COMIENZA AHORA</button>
       </article>
       `;
    }
@@ -232,11 +229,12 @@ class Home extends HTMLElement
    }
 }
 
-class RecordOptions extends HTMLElement
+class Dashboard extends HTMLElement
 {
    connectedCallback()
    {
       this.innerHTML = `
+         <h3 class"title-type__h3">Puedes grabar tus memorias en los siguientes formatos</h3>
          <ul class="record-types__ul">
             <li class="record-type__li">
                <button class="record-type__button">Audio</button>
@@ -246,6 +244,9 @@ class RecordOptions extends HTMLElement
             </li>
             <li class="record-type__li">
                <button class="record-type__button">Text</button>
+            </li>
+            <li>
+               <input class="file-deposit__input" type="file">
             </li>
          </ul>
       `;
@@ -286,7 +287,7 @@ class RecordOptions extends HTMLElement
    }
 }
 
-function testWebComponents(event)
+function testWebComponents( event )
 {
    if(lastComponent)
       lastComponent.remove();
@@ -309,12 +310,14 @@ window.customElements.define("contact-us", ContactUs);
 window.customElements.define("price-info", Pricing);
 window.customElements.define("team-info", Team);
 window.customElements.define("demo-form", Demo);
-window.customElements.define("record-options", RecordOptions);
+window.customElements.define("record-options", Dashboard);
 
 // Take all the buttons
 // Assing a global listener to them
 
-let views = ["generic-home", "about-us", "team-info", "demo-form", "price-infro", "contact-us", "sign-form"];
+/*
+
+let views = ["about-us", "team-info", "price-info", "demo-form", "contact-us", "sign-form"];
 
 let lastComponent;
 
@@ -329,4 +332,50 @@ for(let i = 0; i < navButtons.length; i++)
 
 console.log("All settled up! These are the targeted buttons");
 console.debug(navButtons);
+*/
 
+let form = document.getElementsByClassName("sign-account__form")[0];
+
+form.addEventListener("submit",  async (event) => {
+
+   event.preventDefault();
+
+   // Get the form content
+   let formattedData = new FormData(event.target);
+
+   let structure = {};
+
+   for(const [key,value] of formattedData.entries())
+      structure[key] = value;
+
+
+   let body = JSON.stringify(structure);
+
+   let request = {
+      method  : "POST",
+      headers :{
+         "Content-Type" : "application/json",
+      },
+      body    : body,
+   };
+
+   await fetch("https://servicenuruk.realitynear.org:7726/sign", request).then( async (response) =>
+      {
+
+         let div = document.createElement("div");
+
+         if(!response.ok)
+         {
+            div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
+            throw new Error("Something went wrong");
+         }
+
+         div.textContent = "Disfruta tu tiempo aquí";
+
+         this.appendChild(div);
+
+         await sleep(2000);
+
+         loadDashboard();
+   });
+});

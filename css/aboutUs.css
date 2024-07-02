@@ -1,0 +1,22 @@
+article.about-us__article>p:nth-child(1)
+{
+   display: block;
+}
+
+article.about-us__article>p
+{
+   font-size : 2.4rem;
+}
+
+article.about-us__article>p,
+article.about-us__article>img
+{
+   display: inline-block;
+   margin-top : 2rem;
+}
+
+article.about-us__article
+{
+   margin : auto;
+   padding : 30px 30px
+}
