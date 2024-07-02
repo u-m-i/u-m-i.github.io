@@ -374,9 +374,7 @@ form.addEventListener("submit",  async (event) => {
 
          form.appendChild(div);
 
-         await sleep(2000);
-
-         loadDashboard();
+         setTimeout(loadDashboard, 2000);
    });
 });
 
