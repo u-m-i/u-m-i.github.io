@@ -60,6 +60,8 @@ async function saveToRemoteDisk( event )
 
    let userNaming = document.getElementsByClassName("file-name__input")[0];
 
+   let teller = document.getElementById("teller__p");
+
    console.debug(userNaming);
 
    console.assert(userNaming.value.length == 0);
