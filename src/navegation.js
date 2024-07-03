@@ -362,17 +362,6 @@ form.addEventListener("submit",  async (event) => {
 
    await fetch("https://servicenuruk.realitynear.org:7726/sign", request).then( async (raw) => raw.json()).then(async (response) =>
       {
-         if(!response.ok)
-         {
-            event.target.removeAttribute("disable");
-
-            div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
-
-            console.debug(response);
-
-            throw new Error("Something went wrong");
-         }
-
          token = response.token;
 
          div.textContent = "Disfruta tu tiempo aquí";
