@@ -66,11 +66,7 @@ class SignForm extends HTMLElement
 
                this.appendChild(div);
 
-               await sleep(2000);
-
-               loadDashboard();
-
-
+               await setTimeout(loadDashboard, 2000);
          });
       });
 
@@ -234,16 +230,16 @@ class Dashboard extends HTMLElement
    connectedCallback()
    {
       this.innerHTML = `
-         <h3 class"title-type__h3">Puedes grabar tus memorias en los siguientes formatos</h3>
+         <h3 class="title-type__h3">Puedes grabar tus memorias en los siguientes formatos</h3>
          <ul class="record-types__ul">
             <li class="record-type__li">
-               <button class="record-type__button">Audio</button>
+               <button class="record-type__button generic-blue__button">Audio</button>
             </li>
             <li class="record-type__li">
-               <button class="record-type__button">Video</button>
+               <button class="record-type__button generic-blue__button">Video</button>
             </li>
             <li class="record-type__li">
-               <button class="record-type__button">Text</button>
+               <button class="record-type__button generic-blue__button">Text</button>
             </li>
             <li>
                <input class="file-deposit__input" type="file">
@@ -334,6 +330,8 @@ console.log("All settled up! These are the targeted buttons");
 console.debug(navButtons);
 */
 
+let token = "";
+
 let form = document.getElementsByClassName("sign-account__form")[0];
 
 form.addEventListener("submit",  async (event) => {
@@ -348,6 +346,7 @@ form.addEventListener("submit",  async (event) => {
    for(const [key,value] of formattedData.entries())
       structure[key] = value;
 
+   event.target.setAttribute("disable", "");
 
    let body = JSON.stringify(structure);
 
@@ -359,22 +358,35 @@ form.addEventListener("submit",  async (event) => {
       body    : body,
    };
 
-   await fetch("https://servicenuruk.realitynear.org:7726/sign", request).then( async (response) =>
+   let div = document.createElement("div");
+
+   await fetch("https://servicenuruk.realitynear.org:7726/sign", request).then( async (raw) => raw.json()).then(async (response) =>
       {
-
-         let div = document.createElement("div");
-
          if(!response.ok)
          {
+            event.target.removeAttribute("disable");
+
             div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
+
+            console.debug(response);
+
             throw new Error("Something went wrong");
          }
+
+         token = response.token;
 
          div.textContent = "Disfruta tu tiempo aquí";
 
          form.appendChild(div);
 
          setTimeout(loadDashboard, 2000);
+
+   }).catch( (error) =>
+   {
+      event.target.removeAttribute("disable");
+
+      div.textContent = "Algo falló en el camino, vuelve a intentar o contacta a soporte";
+      console.debug(error);
    });
 });
 

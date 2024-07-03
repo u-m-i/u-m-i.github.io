@@ -2,12 +2,16 @@
 video-record
 {
    text-align : center;
+   margin-top : 2.1rem;
 }
 
 div.video-record-actions__div
 {
    margin : auto;
+   margin-top : 2rem;
    user-select : none;
+
+   font-family: "Poppins-Regular";
 }
 
 
@@ -17,4 +21,22 @@ video.record-screen__video
 
    width  : 640px;
    height : 480px;
+}
+
+h3.title-type__h3
+{
+   margin : auto;
+   text-align: center;
+}
+
+input.file-name__input
+{
+   width  : 332px;
+   height : 25px;
+   margin : auto;
+   padding : 15px 15px 15px 15px;
+   border-color : transparent;
+   font-weight  : 100;
+   font-family  : "Poppins-Medium";
+   font-size    : 1.2rem;
 }

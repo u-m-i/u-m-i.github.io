@@ -58,7 +58,7 @@ form.sign-account__form>p:nth-child(5)>a
 form.sign-account__form>p:nth-child(5)
 {
    width     : 385px;
-   height    : 30px;
+   height    : 90px;
    max-width : 380px;
    margin : auto;
    font-family : "Poppins-Medium";

@@ -8,8 +8,8 @@ class VideoRecord extends HTMLElement
    {
       this.innerHTML = `
       <div class="video-record-actions__div">
-         <button class="video-record__button">Record</button>
-         <button class="stop-record__button">Stop</button>
+         <button class="video-record__button generic-blue__button">Record</button>
+         <button class="stop-record__button generic-blue__button ">Stop</button>
          <input type="text" placeholder="Nombre del archivo" class="file-name__input">
       </div>
       <video autoplay muted playsinline class="record-screen__video"></video>
@@ -103,6 +103,7 @@ async function saveToRemoteDisk( event )
       teller.textContent = "Video subido con exito";
    }).catch( (error) => 
    {
+       console.debug(error);
       teller.textContent = "Algo a ocurrido vuelve porfavor a intentar subirlo";
    });
 }
@@ -114,6 +115,14 @@ async function recordVideo()
 {
    let teller = document.getElementById("teller__p");
    storeRecord.teller = teller;
+
+   let fileName = document.getElementsByClassName("file-name__input")[0];
+    if(fileName === "" || fileName.length < 2)
+    {
+        teller.textContent = "El nombre del archivo no es válido";
+        return;
+    }
+
 
    let videoScreen = document.getElementsByClassName("record-screen__video")[0];
 
@@ -154,6 +163,7 @@ async function getPresignedUrl(fileMedata)
          method  : "POST",
          headers: {
             "Content-Type" : "application/json",
+            "authorization" : token,
          },
          body    : JSON.stringify(fileMedata),
       };
