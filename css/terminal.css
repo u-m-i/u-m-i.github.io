@@ -1,0 +1,23 @@
+
+body
+{
+   margin  : 0;
+   padding : 0;
+
+   --lesser-black: rgba(10,10,10, 95%);
+   --terminal-green : rgba(100,244,178, 98%);
+   background-color : var(--lesser-black);
+}
+
+section.terminal-promtp
+{
+   width  : 100%;
+   height : max-content;
+
+   font-size : 2.5rem;
+}
+
+p.terminal-name
+{
+   color : var(--terminal-green);
+}
