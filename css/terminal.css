@@ -9,7 +9,12 @@ body
    background-color : var(--lesser-black);
 }
 
-section.terminal-promtp
+.terminal-prompter
+{
+   font-size : 2.5rem;
+}
+
+section.terminal-prompt
 {
    width  : 100%;
    height : max-content;
@@ -19,5 +24,6 @@ section.terminal-promtp
 
 p.terminal-name
 {
+   display : inline-block;
    color : var(--terminal-green);
 }
