@@ -1,3 +1,4 @@
+@import url("library.css");
 
 body
 {
@@ -7,6 +8,8 @@ body
    --lesser-black: rgba(10,10,10, 95%);
    --terminal-green : rgba(100,244,178, 98%);
    background-color : var(--lesser-black);
+
+   font-family : "Ubuntu-Regular";
 }
 
 .terminal-prompter

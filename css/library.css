@@ -1,0 +1,23 @@
+@layer input, output, fonts, colors;
+
+
+@layer fonts
+{
+   @font-face
+   {
+      font-family:"Ubuntu-Regular";
+      src : url("fonts/Ubuntu-R.woff");
+   }
+
+   @font-face
+   {
+      font-family:"Ubuntu-Medium";
+      src : url("fonts/Ubuntu-R.woff");
+   }
+
+   @font-face
+   {
+      font-family:"Ubuntu-Bold";
+      src : url("fonts/Ubuntu-R.woff");
+   }
+}
