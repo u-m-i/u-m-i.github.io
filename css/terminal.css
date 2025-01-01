@@ -1,3 +1,4 @@
+@import url("library.css");
 
 body
 {
@@ -7,9 +8,16 @@ body
    --lesser-black: rgba(10,10,10, 95%);
    --terminal-green : rgba(100,244,178, 98%);
    background-color : var(--lesser-black);
+
+   font-family : "Ubuntu-Regular";
 }
 
-section.terminal-promtp
+.terminal-prompter
+{
+   font-size : 2.5rem;
+}
+
+section.terminal-prompt
 {
    width  : 100%;
    height : max-content;
@@ -19,5 +27,6 @@ section.terminal-promtp
 
 p.terminal-name
 {
+   display : inline-block;
    color : var(--terminal-green);
 }
