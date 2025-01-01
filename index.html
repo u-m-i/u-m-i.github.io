@@ -1,29 +1,9 @@
-
-
-<body>
-<script>
-
-let defaultHost = "u-m-i";
-let defaultUser = "unkown";
-
-let homeChildren = ["RULES.md", "Anotations", "PORTFOLIO.anim", "animation1.anim", "animationtwo.anim"];
-
-let commands = ["explanation", "cat", "cd", "less", "display", "activate-anchor"];
-
-class Output extends HTMLElement
-{
-   connectedCallback()
-   {
-      this.innerHTML = `
-      <section class="terminal-output">
-         <a class="file-metaphor"></a>
-         <a class="folder-metaphor"></a>
-      </section>
-      `;
-   }
-}
-
-</script>
+<!DOCTYPE>
+<html>
+   <head>
+      <link rel="stylesheet" href="css/terminal.css">
+   </head>
+   <body>
    <section class="terminal-prompt" id="tty1">
       <p class="terminal-name">
       </p>
@@ -31,4 +11,6 @@ class Output extends HTMLElement
       </q>
       <input type="text" class="terminal-prompter">
    </section>
-</body>
+   </body>
+</html>
+
